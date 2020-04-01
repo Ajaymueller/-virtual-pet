@@ -38,7 +38,7 @@ class Pet {
       this.hunger -= 3;
     } else {
       this.hunger = MIN_HUNGER;
-    } return this
+    }
   };
 
   checkUp() {

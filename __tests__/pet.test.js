@@ -1,8 +1,10 @@
 const Pet = require("../src/pet");
 
-    beforeEach(() => {
-      pet = new Pet('Frodo');
-    });
+  let pet;
+  beforeEach(() => {
+    pet = new Pet('Frodo');
+  });
+
 
   describe('constructor', () => {
     it('returns an object', () => {
@@ -114,10 +116,8 @@ describe('checkUp', () => {
   });
   it('if fitness level <= 3 and hunger level >= 5, it should return I am hungry AND I need a walk', () => {
     const pet = new Pet('Frodo');
-    const hungerValue = 8;
-    const fitnessValue = 2;
-    pet.hunger = hungerValue
-    pet.fitness = fitnessValue;
+    pet.hunger = 8;
+    pet.fitness = 2;
     pet.checkUp();
     expect(pet.checkUp()).toBe('I am hungry AND I need a walk');
   });
