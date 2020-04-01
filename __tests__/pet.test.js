@@ -1,7 +1,10 @@
 const Pet = require("../src/pet");
 
+    beforeEach(() => {
+      pet = new Pet('Frodo');
+    });
 
-describe('constructor', () => {
+  describe('constructor', () => {
     it('returns an object', () => {
       expect(new Pet('Frodo')).toBeInstanceOf(Object);
     });
@@ -70,7 +73,7 @@ describe('walk', () => {
 
   it('throws an error if the pet is no longer alive', () => {
     const pet = new Pet('Frodo');
-    pet.age = 30;
+    pet.fitness = 0;
     expect(() => pet.feed()).toThrow('Your pet is no longer alive :(');
   });
 })
@@ -85,7 +88,7 @@ describe('feed', () => {
 
   it('hunger level should never go below 0', () => {
     const pet = new Pet('Frodo');
-    pet.hunger = 3;
+    pet.hunger <= 3;
     pet.feed();
     expect(pet.hunger).toEqual(0);
   });
