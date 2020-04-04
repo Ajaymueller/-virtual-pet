@@ -62,8 +62,8 @@ class Pet {
     return this.age < 30 && this.hunger < 10 && this.fitness > 0
   };
 
-  haveBaby(child) { 
-    this.children.push(child);
+  haveBaby(name) {
+    this.children.push(new Pet(name));
   };
 
   

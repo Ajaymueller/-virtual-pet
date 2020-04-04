@@ -140,8 +140,7 @@ describe('isAlive', () => {
 describe('haveBaby', () => {
   it('should be able to have a baby', () => {
     const parent = new Pet('Frodo');
-    const child = new Pet('Sam');
-    parent.haveBaby(child);
-    expect(parent.children).toEqual([child]);
-  })
-})
+    parent.haveBaby('Sam');
+    expect(parent.children).toEqual([new Pet('Sam')]);
+  });
+});
