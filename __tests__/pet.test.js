@@ -142,6 +142,6 @@ describe('haveBaby', () => {
     const parent = new Pet('Frodo');
     const child = new Pet('Sam');
     parent.haveBaby(child);
-    expect(parent.haveBaby('Sam')).toEqual(child)
+    expect(parent.children).toEqual([child]);
   })
 })

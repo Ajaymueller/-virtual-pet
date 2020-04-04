@@ -8,7 +8,7 @@ class Pet {
     this.age = 0;
     this.hunger = MIN_HUNGER;
     this.fitness = MAXIMUM_FITNESS;
-    this.hasChild = false;
+    this.children = [];
   };
 
   growUp() {
@@ -63,7 +63,7 @@ class Pet {
   };
 
   haveBaby(child) { 
-    return new Pet(child);
+    this.children.push(child);
   };
 
   
